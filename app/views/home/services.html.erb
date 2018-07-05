@@ -31,30 +31,6 @@
          </div>
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <div class="owl-carousel-5">
-         <div class="item">
-           <%#= image_tag ('car/a1.png'), :class => "img-responsive objects-1", :alt =>"" %>
-
-          </div>
-          <div class="item">
-            <%#= image_tag ('car/a2.png'), :class => "img-responsive objects-1", :alt =>"" %>
-
-          </div>
-          <div class="item">
-            <%#= image_tag ('car/a3.png'), :class => "img-responsive objects-1", :alt =>"" %>
-
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <p>Dealer obcaecati adipisci vero lorem ipsum dolor sit amet, consectetur adipisicing elit. dolorum pariatur aut consectetur. Sit quisquam rerum corporis neque atque inventore nulla, quibusdam, ipsa suscipit aperiam reiciendis, ea odio?</p>
-        <br />
-        <p>Adipisicing ipsum dolor sit amet, consectetur elit. Obcaecati adipisci vero dolorum pariatur aut consectetur. Sit quisquam rerum corporis neque atque inventore nulla, quibusdam, ipsa suscipit aperiam reiciendis, ea odio?</p>
-        <p>Obcaecati adipisci vero dolorum pariatur aut consectetur. lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quisquam rerum corporis neque atque inventore nulla, quibusdam, ipsa suscipit aperiam reiciendis, ea odio?</p>
-      </div>
-    </div> -->
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-6">
         <div class="feature-box-3">
@@ -151,6 +127,50 @@
 </section>
 
 <!--======= WELCOME SECTION  -->
+
+<!-- <hr class="gray" />
+ -->
+<!--======= Services SECTION  -->
+
+<section class="welcome-4 page-section-ptb white-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+         <div class="section-title">
+           <h2>Book a Service</h2>
+           <div class="separator"></div>
+         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <h6>Select Car</h6>
+        <%= select_tag "", options_from_collection_for_select(@car, "slug", "name"), class: 'selectpicker show-tick', id: 'car_type'%>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="row"> -->
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <h6>Select Model</h6>
+        <select class="selectpicker show-tick" data-style="btn-primary">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="row"> -->
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <h6>Select Fuel Type</h6>
+        <select class="selectpicker show-tick" data-style="btn-primary">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======= Services SECTION  -->
 
 <hr class="gray" />
 
@@ -391,3 +411,17 @@
    </div>
  </section>
 <!--======= COUNTER SECTION  -->
+
+<!--======= DropDown Load -->
+<script>
+  $("#car_type").change(function(){
+    $.ajax({
+      url: "home/get_car_models",
+      success: function(data){
+          $("#floors_select").html(data);
+      }
+    });
+
+});
+</script>
+<!--======= DropDown Load -->

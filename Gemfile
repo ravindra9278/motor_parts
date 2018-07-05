@@ -40,6 +40,8 @@ gem 'magnific-popup-rails', '~> 1.1.0'
 # Use Jquery Slick for the slick slider
 gem "jquery-slick-rails"
 gem 'wow-rails'
+gem 'activeadmin', '~> 1.3.0'
+gem 'devise'
 
 
 group :development, :test do

@@ -8,5 +8,8 @@ class HomeController < ApplicationController
   def faq
   end
   def services
+    @car = Car.all
+  end
+  def car_repair
   end
 end
