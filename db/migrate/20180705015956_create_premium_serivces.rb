@@ -1,6 +1,6 @@
 class CreatePremiumSerivces < ActiveRecord::Migration[5.1]
   def change
-    create_table :premium_serivces do |t|
+    create_table :premium_services do |t|
       t.string :service
 
       t.timestamps

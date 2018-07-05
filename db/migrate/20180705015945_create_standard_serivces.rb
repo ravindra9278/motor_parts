@@ -1,6 +1,6 @@
 class CreateStandardSerivces < ActiveRecord::Migration[5.1]
   def change
-    create_table :standard_serivces do |t|
+    create_table :standard_services do |t|
       t.string :service
 
       t.timestamps
