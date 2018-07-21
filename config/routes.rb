@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get 'home/contact'
   get 'home/faq'
   get 'home/services'
-  get 'home/car_repair'
+  get 'home/car_repair/:car_id/:model_name', to: 'home#car_repair'
   get 'home/get_car_models'
 end

@@ -1,6 +1,6 @@
 ActiveAdmin.register CarModel do
-  permit_params :car_id, :name, :basic_price, :standard_price, :premium_price, :fuel_type, basic_services_attributes: [:service], 
-  standard_services_attributes: [:service], premium_services_attributes: [:service]
+  permit_params :car_id, :name, :basic_price, :standard_price, :premium_price, :fuel_type, basic_services_attributes: [:id, :service], 
+  standard_services_attributes: [:id, :service], premium_services_attributes: [:id, :service]
 
   form do |f|
     f.inputs 'Car Model' do

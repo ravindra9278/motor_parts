@@ -42,7 +42,7 @@ gem "jquery-slick-rails"
 gem 'wow-rails'
 gem 'activeadmin', '~> 1.3.0'
 gem 'devise'
-
+gem 'exception_handler', '~> 0.8.0.0'
 
 group :development, :test do
   gem 'sqlite3'
